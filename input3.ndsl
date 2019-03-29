@@ -1,0 +1,8 @@
+fsm first
+ProvideTreatment=NC, ProvideTreatment:NC->CNF ProvideTreatment=CNF,GetSymptoms=NC,GetTestReport=NC,
+ProvideTreatment=CNF,GetSymptoms=FU, ProvideTreatment:CNF->FU ProvideTreatment=FU,
+ProvideTreatment=CNF,GetTestReport=FU, ProvideTreatment:CNF->FU ProvideTreatment=FU,
+ProvideTreatment=CNF,GetSymptoms=NC, GetSymptoms:NC->CNF ProvideTreatment=CNF,GetSymptoms=CNF,
+ProvideTreatment=CNF,GetSymptoms=CNF, GetSymptoms:CNF->FU ProvideTreatment=CNF,GetSymptoms=FU,
+ProvideTreatment=CNF,GetTestReport=NC, GetTestReport:NC->CNF ProvideTreatment=CNF,GetTestReport=CNF,
+ProvideTreatment=CNF,GetTestReport=CNF, GetTestReport:CNF->FU ProvideTreatment=CNF,GetTestReport=FU,
